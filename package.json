@@ -1,0 +1,25 @@
+{
+  "name": "chat-monorepo",
+  "version": "1.0.0",
+  "description": "Real-time 1-1 chat application monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "server:dev": "turbo run dev --filter=server",
+    "web:dev": "turbo run dev --filter=web"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.16"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
